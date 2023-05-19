@@ -8,10 +8,18 @@ import Dashboard from "./Dashboard";
 const Homepage = () => {
   const [currencies, setCurrencies] = useState("");
 
+  const [conversion, setConversion] = useState("");
+
+
   useEffect(() => {
     currencyData().then(setCurrencies);
     // or .then(setCurrency)
   }, []);
+
+  // useEffect(() => {
+  //   conversionData().then(setConversion);
+  //   // or .then(setCurrency)
+  // }, []);
 
   console.log(currencies);
   return (

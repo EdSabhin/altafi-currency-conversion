@@ -9,3 +9,4 @@ export const currencyData = async () => {
     console.log(error);
   }
 };
+

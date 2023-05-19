@@ -41,6 +41,14 @@ const Footer = () => {
           </svg>
         </a>
       </div>
+      <div>
+        <a
+          href="https://www.flaticon.com/free-icons/left-and-right-arrows"
+          title="left and right arrows icons"
+        >
+          Left and right arrows icons created by Laisa Islam Ani - Flaticon
+        </a>
+      </div>
     </footer>
   );
 };
