@@ -4,11 +4,10 @@ import { useState, useEffect } from "react";
 import { currencyData } from "@service/currencyData";
 import Converter from "./Converter";
 import Dashboard from "./Dashboard";
+import CurrencyChart from "./CurrencyChart";
 
 const Homepage = () => {
   const [currencies, setCurrencies] = useState("");
-
-  const [conversion, setConversion] = useState("");
 
 
   useEffect(() => {
@@ -25,7 +24,10 @@ const Homepage = () => {
   return (
     <div>
       <Converter currencies={currencies} />
-      <Dashboard currencies={currencies}/>
+      <div className="w-full flex gap-4">
+        <Dashboard currencies={currencies} />
+        <CurrencyChart />
+      </div>
     </div>
   );
 };

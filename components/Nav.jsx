@@ -1,6 +1,5 @@
 import Image from "next/image";
-import SearchBar from "./SearchBar";
-import TopFive from "./TopFive";
+import TopFive from "./TopThree";
 
 const Nav = () => {
   return (
@@ -26,9 +25,7 @@ const Nav = () => {
         <Image src="" alt="" width={40} height={40} className="" />
         <a className="btn btn-ghost normal-case text-3xl">Fialta</a>
       </div>
-
       <TopFive />
-      <SearchBar />
     </div>
   );
 };

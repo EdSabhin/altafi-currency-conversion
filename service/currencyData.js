@@ -1,4 +1,3 @@
-const host = "api.frankfurter.app";
 
 export const currencyData = async () => {
   try {

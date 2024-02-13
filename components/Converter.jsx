@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import Select from "./Select";
 import CurrencyInput from "./CurrencyInput";
@@ -17,14 +17,21 @@ const Converter = ({ currencies }) => {
   const [currencyUnit, setCurrencyUnit] = useState("");
 
   const handleConversion = () => {
-    conversionData(amount, selectFrom, selectTo).then(setConversion);
-    conversionData(1, selectFrom, selectTo).then(setCurrencyUnit);
+    if (amount !== "") {
+      conversionData(amount, selectFrom, selectTo).then(setConversion);
+      conversionData(1, selectFrom, selectTo).then(setCurrencyUnit);
+    }
   };
+
+  useEffect(() => {
+    if (selectFrom !== "" && selectTo !== "") {
+      handleConversion();
+    }
+  }, [selectFrom, selectTo]);
 
   const switchCurrencies = () => {
     setSelectFrom(selectTo);
     setSelectTo(selectFrom);
-    setConversion("");
   };
 
   const date = new Date();
@@ -55,12 +62,16 @@ const Converter = ({ currencies }) => {
           <ConversionButton conversionData={handleConversion} />
         </div>
       </div>
-      {conversion && (
+      {conversion && currencyUnit && (
         <div className="w-[90%] flex flex-col gap-4 justify-center items-start">
-          <h4 className="text-gray-400">{`1 ${conversion.base} equals ${currencyUnit.rates[selectTo]} ${selectTo}`}</h4>
+          <h4 className="text-gray-400">{`1 ${conversion.base ?? ""} equals ${
+            currencyUnit.rates[selectTo] ?? ""
+          } ${selectTo ?? ""}`}</h4>
           <div className="flex gap-2">
-            <h2 className="text-3xl">{`${selectTo}`}</h2>
-            <h2 className="text-3xl">{`${conversion?.rates[selectTo]}`}</h2>
+            <h2 className="text-3xl">{`${selectTo ?? ""}`}</h2>
+            <h2 className="text-3xl">{`${
+              conversion?.rates[selectTo] ?? ""
+            }`}</h2>
           </div>
 
           <p className="text-xs">{`${date} Disclaimer`}</p>

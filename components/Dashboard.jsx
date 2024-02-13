@@ -1,7 +1,7 @@
 const Dashboard = ({ currencies }) => {
   return (
-    <div className="overflow-x-auto">
-      <table className="table table-compact w-full">
+    <div className="w-[25%] overflow-x-auto">
+      <table className="table table-compact">
         <thead>
           <tr>
             <th></th>
