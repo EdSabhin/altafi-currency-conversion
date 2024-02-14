@@ -10,7 +10,7 @@ const CurrencyInput = ({ amount }) => {
   }
   return (
     <div className="flex flex-col gap-2">
-      <p>Amount:</p>
+      <p className="font-semibold">Amount:</p>
       <input
         type="text"
         placeholder="Enter Amount"

@@ -10,7 +10,7 @@ const Select = ({ currencies, select, selectedValue, title }) => {
 
   return (
     <div className="flex flex-col gap-2">
-      <p>{title}</p>
+      <p className="font-semibold">{title}</p>
       <select
         value={selectedValue}
         onChange={handleCurrencySelect}

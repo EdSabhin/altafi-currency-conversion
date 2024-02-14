@@ -65,8 +65,8 @@ const Converter = ({ currencies }) => {
         </div>
       </div>
       {conversion && currencyUnit && (
-        <div className="flex flex-col  gap-4 items-start">
-          <h2 className="text-xl underline underline-offset-4">
+        <div className="flex flex-col  gap-4 items-start pt-4 pl-5 border-t-2 border-l-2 border-slate-200 rounded-md">
+          <h2 className="text-xl">
             Today&apos;s Conversion of{" "}
             <span className="font-semibold text-blue-500">{selectFrom}</span> to
             <span className="font-semibold text-blue-500"> {selectTo}</span>

@@ -5,7 +5,7 @@ import { currencyData } from "@service/currencyData";
 import Converter from "./Converter";
 import Dashboard from "./Dashboard";
 import CurrencyChart from "./CurrencyChart";
-import TopFive from "./TopThree";
+import TopFive from "./TopFive";
 
 const Homepage = () => {
   const [currencies, setCurrencies] = useState("");

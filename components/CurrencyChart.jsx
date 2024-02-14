@@ -1,8 +1,8 @@
 import { historyData } from "@service/historyData";
 import { Card, Title, LineChart } from "@tremor/react";
 import { useState, useEffect } from "react";
-import YearRange from "./YearInput";
 import { yearData } from "@service/yearData";
+import DateInput from "./DateInput";
 
 const dataFormatter = (number) => {
   return "$" + Intl.NumberFormat("us").format(number).toString();
@@ -62,12 +62,12 @@ const CurrencyChart = () => {
 
   return (
     <div className="w-[70%] h-full flex">
-      <Card className="w-full h-full flex flex-col">
-        <Title className="bg-[#F2F7FF] border border-slate-400">
+      <div className="w-full h-full flex flex-col border border-slate-200 bg-white rounded-md">
+        <h2 className="py-4 pl-5 text-2xl font-semibold bg-[#F2F7FF]">
           EUR against Western Dollars (Year 2000 onward).
-        </Title>
+        </h2>
         <LineChart
-          className="w-full mt-4 bg-[#F2F7FF]"
+          className="w-full bg-white"
           data={ratesHistory}
           index="date"
           categories={["USD", "CAD", "AUD", "NZD"]}
@@ -80,21 +80,30 @@ const CurrencyChart = () => {
           maxValue={2.75}
           allowDecimals={true}
         />
-        <div className="w-full flex justify-center items-center gap-12 pt-8 pb-4">
-          <YearRange
+        <div className="w-full flex justify-center items-center gap-8 pt-8 pb-12">
+          <div className="flex items-center">
+            <h4 className="py-1 px-8 border-l border-blue-500 rounded-md text-md font-semibold">
+              Time Period
+            </h4>
+            <p className="pb-1 text-3xl text-blue-700 animate-ping">→</p>
+          </div>
+
+          <DateInput
+            title="From:"
             setDate={setDateFrom}
             value={dateFrom}
             currentDate={formattedDate}
             max={dateTo}
           />
-          <YearRange
+          <DateInput
+            title="To:"
             setDate={setDateTo}
             value={dateTo}
             min={dateFrom}
             max={formattedDate}
           />
         </div>
-      </Card>
+      </div>
     </div>
   );
 };
