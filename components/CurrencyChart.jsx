@@ -1,5 +1,5 @@
 import { historyData } from "@service/historyData";
-import { Card, Title, LineChart } from "@tremor/react";
+import { AreaChart } from "@tremor/react";
 import { useState, useEffect } from "react";
 import { yearData } from "@service/yearData";
 import DateInput from "./DateInput";
@@ -64,19 +64,18 @@ const CurrencyChart = () => {
     <div className="w-[70%] h-full flex">
       <div className="w-full h-full flex flex-col border border-slate-200 bg-white rounded-md">
         <h2 className="py-4 pl-5 text-2xl font-semibold bg-[#F2F7FF]">
-          EUR against Western Dollars (Year 2000 onward).
+          EUR Against Dollars Trends Since 2000.
         </h2>
-        <LineChart
-          className="w-full bg-white"
+        <AreaChart
+          className="w-full py-8 px-4 bg-slate-50"
           data={ratesHistory}
           index="date"
           categories={["USD", "CAD", "AUD", "NZD"]}
-          colors={["cyan", "red", "amber", "emerald"]}
+          colors={["blue", "violet", "sky", "teal"]}
           valueFormatter={dataFormatter}
           curveType="natural"
           showYAxis={true}
           showGridLines={true}
-          showGradient={false}
           maxValue={2.75}
           allowDecimals={true}
         />

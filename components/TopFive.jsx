@@ -10,6 +10,10 @@ const TopFive = () => {
   const [AUD, setAUD] = useState("");
   const [CAD, setCAD] = useState("");
 
+  const currentDate = new Date();
+  const options = { year: "numeric", month: "short", day: "numeric" };
+  const fullDate = currentDate.toLocaleDateString("en-US", options);
+
   useEffect(() => {
     conversionData(1, "USD", "EUR").then(setUSD);
     conversionData(1, "JPY", "EUR").then(setJPY);
@@ -22,11 +26,16 @@ const TopFive = () => {
 
   return (
     <div className="w-[70%] flex overflow-x-auto bg-[#F1F5F9] rounded-md">
-      <div className="flex mb-12 border-b border-t border-blue-700">
-        <h2 className="h-[6.6rem] pt-4 pl-5 text-2xl text-slate-600 font-semibold  bg=[#F1F5F9] rounded-md">
-          Top 5 Currencies by Trading Volume Against the Euro (EUR)
-        </h2>
-        <table className="w-full table">
+      <div className="flex mb-12 border-t border-blue-700">
+        <div className="h-[10.1rem] flex flex-col bg-indigo-50">
+          <h2 className="pt-4 pl-5 text-2xl text-blue-700 font-semibold  bg=[#F1F5F9] rounded-md">
+            {fullDate}
+          </h2>
+          <h2 className="pt-6 pl-5 text-xl text-slate-600 font-semibold  bg=[#F1F5F9] rounded-md">
+            Top 5 Currencies by Trading Volume Against the Euro (EUR)
+          </h2>
+        </div>
+        <table className="w-full table border-b border-blue-700">
           {/* head*/}
           <thead>
             <tr>
