@@ -17,8 +17,9 @@ const TopFive = () => {
   console.log(USD, GBP, JPY);
 
   return (
-    <div className="w-full overflow-x-auto">
-      <table className="table w-full">
+    <div className="w-[70%] px-10 overflow-x-auto border-4 border-white bg-slate-500 rounded-md">
+      <h2 className="text-2xl text-slate-100 font-semibold py-5">Top Currencies by Trading Volume</h2>
+      <table className="w-full table mb-12">
         {/* head*/}
         <thead>
           <tr>

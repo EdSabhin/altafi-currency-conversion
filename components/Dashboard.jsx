@@ -1,18 +1,16 @@
 const Dashboard = ({ currencies }) => {
   return (
-    <div className="w-[25%] overflow-x-auto">
-      <table className="table table-compact">
+    <div className="w-[20%] h-64 overflow-y-auto">
+      <table className="table table-compact ">
         <thead>
-          <tr>
-            <th></th>
+          <tr className="sticky top-0">
             <th>Code</th>
             <th>Name</th>
           </tr>
         </thead>
         <tbody>
-          {Object.entries(currencies).map(([code, name], index) => (
+          {Object.entries(currencies).map(([code, name]) => (
             <tr key={code}>
-              <th>{index + 1}</th>
               <td>{code}</td>
               <td>{name}</td>
             </tr>

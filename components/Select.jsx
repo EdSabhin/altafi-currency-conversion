@@ -1,6 +1,6 @@
 import React from "react";
 
-const Select = ({ currencies, select, selectedValue }) => {
+const Select = ({ currencies, select, selectedValue, title }) => {
   function handleCurrencySelect(event) {
     const selectedCurrency = event.target.value;
     if (selectedCurrency !== "default") {
@@ -9,11 +9,12 @@ const Select = ({ currencies, select, selectedValue }) => {
   }
 
   return (
-    <div>
+    <div className="flex flex-col gap-2">
+      <p>{title}</p>
       <select
         value={selectedValue}
         onChange={handleCurrencySelect}
-        className="select border-emerald-400 focus:border-emerald-400 focus:outline-solid focus:outline-cyan-200 w-full"
+        className="select border-white"
       >
         <option value="">Select Currency</option>
         {Object.keys(currencies).map((code) => (

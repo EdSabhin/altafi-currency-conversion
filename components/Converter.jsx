@@ -42,38 +42,44 @@ const Converter = ({ currencies }) => {
   console.log(selectTo);
 
   return (
-    <div className="w-full flex justify-center items-center gap-10  pb-14 border-y-4 border-y-emerald-300 pt-12">
-      <div className="w-full flex flex-col gap-10 justify-center items-center">
-        <div className="w-1/2 flex justify-start items-center gap-5">
+    <div className="w-[50%] flex flex-col j items-start gap-14 pb-14">
+      <div className="flex flex-col gap-16">
+        <div className="flex items-end gap-10">
           <Select
+            title="From:"
             currencies={currencies}
             select={setSelectFrom}
             selectedValue={selectFrom}
           />
           <SwitchButton switchCurrencies={switchCurrencies} />
           <Select
+            title="To:"
             currencies={currencies}
             select={setSelectTo}
             selectedValue={selectTo}
           />
         </div>
-        <div className="w-1/2 flex justify-start items-center gap-7">
+        <div className="flex items-end gap-[4.5rem]">
           <CurrencyInput amount={setAmount} />
           <ConversionButton conversionData={handleConversion} />
         </div>
       </div>
       {conversion && currencyUnit && (
-        <div className="w-[90%] flex flex-col gap-4 justify-center items-start">
-          <h4 className="text-gray-400">{`1 ${conversion.base ?? ""} equals ${
-            currencyUnit.rates[selectTo] ?? ""
-          } ${selectTo ?? ""}`}</h4>
+        <div className="flex flex-col  gap-4 items-start">
+          <h2 className="text-xl underline underline-offset-4">
+            Today&apos;s Conversion of{" "}
+            <span className="font-semibold text-blue-500">{selectFrom}</span> to
+            <span className="font-semibold text-blue-500"> {selectTo}</span>
+          </h2>
+          <h4 className="text-gray-400">{`Current Exchange Rate: 1 ${
+            conversion.base ?? ""
+          } to ${currencyUnit.rates[selectTo] ?? ""} ${selectTo ?? ""}`}</h4>
           <div className="flex gap-2">
             <h2 className="text-3xl">{`${selectTo ?? ""}`}</h2>
             <h2 className="text-3xl">{`${
               conversion?.rates[selectTo] ?? ""
             }`}</h2>
           </div>
-
           <p className="text-xs">{`${date} Disclaimer`}</p>
         </div>
       )}

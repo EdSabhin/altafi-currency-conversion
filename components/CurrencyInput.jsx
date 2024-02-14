@@ -9,11 +9,12 @@ const CurrencyInput = ({ amount }) => {
     amount(numbersOnly);
   }
   return (
-    <div>
+    <div className="flex flex-col gap-2">
+      <p>Amount:</p>
       <input
         type="text"
         placeholder="Enter Amount"
-        className="input input-bordered input-primary w-full  border-emerald-400 focus:border-emerald-400 focus:outline-solid focus:outline-cyan-200"
+        className="input border-white"
         onChange={(e) => {
           handleInputChange(e);
         }}

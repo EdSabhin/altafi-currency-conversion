@@ -1,9 +1,12 @@
 import Image from "next/image";
-import TopFive from "./TopThree";
 
 const Nav = () => {
   return (
-    <div className="navbar bg-base-100 w-full flex justify-between pb-12">
+    <div className="navbar w-full flex justify-center items-center py-6  gap-12 bg-neutral text-neutral-content">
+      <div className="flex gap-4">
+        <Image src="" alt="" width={40} height={40} className="" />
+        <a className="btn btn-ghost normal-case text-3xl">Fialta</a>
+      </div>
       <div className="flex-none">
         <button className="btn btn-square btn-ghost">
           <svg
@@ -21,11 +24,6 @@ const Nav = () => {
           </svg>
         </button>
       </div>
-      <div className="w-1/2 flex">
-        <Image src="" alt="" width={40} height={40} className="" />
-        <a className="btn btn-ghost normal-case text-3xl">Fialta</a>
-      </div>
-      <TopFive />
     </div>
   );
 };

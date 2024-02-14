@@ -61,11 +61,13 @@ const CurrencyChart = () => {
   console.log(dateTo);
 
   return (
-    <div className="w-full flex">
-      <Card className="w-[75%]">
-        <Title>EUR against Western Dollars (Year 2000 onward).</Title>
+    <div className="w-[70%] h-full flex">
+      <Card className="w-full h-full flex flex-col">
+        <Title className="bg-[#F2F7FF] border border-slate-400">
+          EUR against Western Dollars (Year 2000 onward).
+        </Title>
         <LineChart
-          className="w-full h-1/3 mt-4 bg-indigo-100"
+          className="w-full mt-4 bg-[#F2F7FF]"
           data={ratesHistory}
           index="date"
           categories={["USD", "CAD", "AUD", "NZD"]}
@@ -78,7 +80,7 @@ const CurrencyChart = () => {
           maxValue={2.75}
           allowDecimals={true}
         />
-        <div className="w-full flex justify-center items-center gap-8 py-4">
+        <div className="w-full flex justify-center items-center gap-12 pt-8 pb-4">
           <YearRange
             setDate={setDateFrom}
             value={dateFrom}

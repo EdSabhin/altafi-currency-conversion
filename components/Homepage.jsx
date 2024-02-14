@@ -5,10 +5,10 @@ import { currencyData } from "@service/currencyData";
 import Converter from "./Converter";
 import Dashboard from "./Dashboard";
 import CurrencyChart from "./CurrencyChart";
+import TopFive from "./TopThree";
 
 const Homepage = () => {
   const [currencies, setCurrencies] = useState("");
-
 
   useEffect(() => {
     currencyData().then(setCurrencies);
@@ -22,11 +22,15 @@ const Homepage = () => {
 
   console.log(currencies);
   return (
-    <div>
-      <Converter currencies={currencies} />
-      <div className="w-full flex gap-4">
+    <div className="w-full flex flex-col gap-12 py-10 px-80">
+      <div className="w-full flex justify-center items-start">
+        <Converter currencies={currencies} />
         <Dashboard currencies={currencies} />
+      </div>
+
+      <div className="flex flex-col justify-center items-center gap-16">
         <CurrencyChart />
+        <TopFive />
       </div>
     </div>
   );
