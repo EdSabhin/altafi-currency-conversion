@@ -1,8 +1,9 @@
+import { useState, useEffect } from "react";
 import { historyData } from "@service/historyData";
 import { AreaChart } from "@tremor/react";
-import { useState, useEffect } from "react";
 import { yearData } from "@service/yearData";
 import DateInput from "./DateInput";
+import ResetButton from "./ResetButton";
 
 const dataFormatter = (number) => {
   return "$" + Intl.NumberFormat("us").format(number).toString();
@@ -32,10 +33,6 @@ const CurrencyChart = () => {
       yearData(dateFrom, dateTo).then(setDateData);
   }, [dateFrom, dateTo]);
 
-  console.log(history);
-  console.log("DATA1", dateData);
-  console.log(formattedDate);
-
   let ratesHistory = "";
 
   if (dateData.rates) {
@@ -56,9 +53,10 @@ const CurrencyChart = () => {
     }));
   }
 
-  console.log(ratesHistory);
-  console.log(dateFrom);
-  console.log(dateTo);
+  const resetDates = () => {
+    setDateFrom("");
+    setDateTo("");
+  };
 
   return (
     <div className="w-[70%] h-full flex">
@@ -80,13 +78,12 @@ const CurrencyChart = () => {
           allowDecimals={true}
         />
         <div className="w-full flex justify-center items-center gap-8 pt-8 pb-12">
-          <div className="flex items-center">
+          <div className="flex items-center relative">
             <h4 className="py-1 px-8 border-l border-blue-500 rounded-md text-md font-semibold">
               Time Period
             </h4>
             <p className="pb-1 text-3xl text-blue-700 animate-ping">→</p>
           </div>
-
           <DateInput
             title="From:"
             setDate={setDateFrom}
@@ -102,6 +99,7 @@ const CurrencyChart = () => {
             max={formattedDate}
           />
         </div>
+        <ResetButton resetDates={resetDates} />
       </div>
     </div>
   );
