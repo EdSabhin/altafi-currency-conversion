@@ -5,7 +5,7 @@ const SwitchButton = ({ switchCurrencies }) => {
   return (
     <button onClick={switchCurrencies}>
       <svg
-        className="animate-pulse hover:animate-ping duration-1000 transition ease-in-out"
+        className="fade-in-out duration-1000 transition ease-in-out"
         xmlns="http://www.w3.org/2000/svg"
         class="icon icon-tabler icon-tabler-arrows-exchange"
         width="50"

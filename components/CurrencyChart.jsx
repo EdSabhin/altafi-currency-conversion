@@ -62,7 +62,7 @@ const CurrencyChart = () => {
     <div className="w-[70%] h-full flex">
       <div className="w-full h-full flex flex-col border border-slate-200 bg-white rounded-md">
         <h2 className="py-4 pl-5 text-2xl font-semibold bg-[#F2F7FF]">
-          EUR Against Dollars Trends Since 2000.
+          EUR against the World&apos;s Dollars since 2000.
         </h2>
         <AreaChart
           className="w-full py-8 px-4 bg-slate-50"

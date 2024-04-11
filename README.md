@@ -9,3 +9,4 @@
 - responsiveness
 - converter title
 - menu (about, portfolio)
+- favicon

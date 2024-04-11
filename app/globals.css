@@ -18,3 +18,17 @@
     hsl(240deg 1% 39%) 100%
   );
 }
+
+.fade-in-out {
+  animation: fadeInOut 2s ease infinite alternate; /* Animation duration: 2 seconds */
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0; 
+  }
+  100% {
+    opacity: 1; 
+  }
+}
+
