@@ -10,7 +10,8 @@ const DateInput = ({ setDate, value, max, min, currentDate, title }) => {
         onChange={(e) => setDate(e.target.value)}
         value={value}
         max={currentDate || max ? max || currentDate : ""}
-        min={min ? min : ""}
+        min={min ? min : "1999-01-04"}
+        // Frankfurter API has data starting at Jan 4 1999
       />
     </div>
   );
