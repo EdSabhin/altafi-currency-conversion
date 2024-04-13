@@ -42,7 +42,7 @@ const Converter = ({ currencies }) => {
   console.log(selectTo);
 
   return (
-    <div className="w-[50%] flex flex-col j items-start gap-14 pb-14">
+    <div className="w-[50%] flex flex-col j items-start gap-24 pb-14">
       <div className="flex flex-col gap-16">
         <div className="flex items-end gap-10">
           <Select
@@ -65,7 +65,7 @@ const Converter = ({ currencies }) => {
         </div>
       </div>
       {conversion && currencyUnit && (
-        <div className="flex flex-col  gap-4 items-start pt-4 pl-5 border-t-2 border-l-2 border-slate-200 rounded-md">
+        <div className="flex flex-col  gap-4 items-start pt-7 pl-7 border-t-2 border-l-2 border-slate-200 rounded-md">
           <h2 className="text-xl">
             Today&apos;s Conversion of{" "}
             <span className="font-semibold text-blue-500">{selectFrom}</span> to
