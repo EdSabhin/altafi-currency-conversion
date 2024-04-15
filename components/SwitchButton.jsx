@@ -12,7 +12,7 @@ const SwitchButton = ({ switchCurrencies }) => {
         height="50"
         viewBox="0 0 24 24"
         stroke-width="1.2"
-        stroke="#3B82F6"
+        stroke="#3B82F7"
         fill="none"
         stroke-linecap="round"
         stroke-linejoin="round"

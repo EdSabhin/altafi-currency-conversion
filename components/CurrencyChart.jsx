@@ -60,8 +60,8 @@ const CurrencyChart = () => {
   };
 
   return (
-    <div className="w-[70%] h-full flex border-t border-slate-200 rounded-md">
-      <div className="w-full h-full flex flex-col border border-slate-200 bg-white">
+    <div className="w-[70%] h-full flex rounded-t-md">
+      <div className="w-full h-full flex flex-col border border-slate-200 bg-white rounded-md">
         <div className="flex flex-col gap-8 py-6 pl-5 text-2xl font-semibold bg-[#F2F7FF]">
           <h2>EUR against the World&apos;s Dollars</h2>
           <h3 className="mb-4">

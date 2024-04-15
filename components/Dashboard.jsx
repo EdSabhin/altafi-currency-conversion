@@ -1,6 +1,6 @@
 const Dashboard = ({ currencies }) => {
   return (
-    <div className="w-[20%] h-64 overflow-y-auto rounded-t-2xl rounded-b-md">
+    <div className="w-[20%] h-64 overflow-y-auto rounded-tl-2xl rounded-b-md">
       <table className="w-full table table-compact">
         <thead>
           <tr className="sticky top-0">
