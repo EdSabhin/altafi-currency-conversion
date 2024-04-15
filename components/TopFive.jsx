@@ -28,14 +28,14 @@ const TopFive = () => {
     <div className="w-[70%] flex overflow-x-auto bg-[#F1F5F9] rounded-md">
       <div className="flex mb-12 border-t border-blue-700">
         <div className="h-[10.1rem] flex flex-col bg-indigo-50">
-          <h2 className="pt-4 pl-5 text-2xl text-blue-700 font-semibold  bg=[#F1F5F9] rounded-md">
+          <h2 className="pt-4 pl-5 text-2xl text-blue-700 font-semibold rounded-md underline underline-offset-4 decoration-1">
             {fullDate}
           </h2>
-          <h2 className="pt-6 pl-5 text-xl text-slate-600 font-semibold  bg=[#F1F5F9] rounded-md">
+          <h2 className="pt-6 pl-5 text-xl text-slate-600 font-semibold rounded-md">
             Top 5 Currencies by Trading Volume Against the Euro (EUR)
           </h2>
         </div>
-        <table className="w-full table border-b border-blue-700">
+        <table className="w-full table">
           {/* head*/}
           <thead>
             <tr>

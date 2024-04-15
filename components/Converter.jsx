@@ -65,7 +65,7 @@ const Converter = ({ currencies }) => {
         </div>
       </div>
       {conversion && currencyUnit && (
-        <div className="flex flex-col  gap-4 items-start pt-7 pl-7 border-t-2 border-l-2 border-slate-200 rounded-md">
+        <div className="flex flex-col  gap-4 items-start pt-7 pl-7 border-t-2 border-l-2 border-slate-200 rounded-tl-md">
           <h2 className="text-xl">
             Today&apos;s Conversion of{" "}
             <span className="font-semibold text-blue-500">{selectFrom}</span> to

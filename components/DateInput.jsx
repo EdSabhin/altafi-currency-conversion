@@ -6,7 +6,7 @@ const DateInput = ({ setDate, value, max, min, currentDate, title }) => {
       <p className="font-semibold">{title}</p>
       <input
         type="date"
-        className="w-full py-3 px-6 border border-blue-500 rounded-md cursor-pointer"
+        className="w-full py-3 px-6 border border-blue-500 rounded-md"
         onChange={(e) => setDate(e.target.value)}
         value={value}
         max={currentDate || max ? max || currentDate : ""}
