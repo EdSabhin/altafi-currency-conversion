@@ -12,15 +12,8 @@ const Homepage = () => {
 
   useEffect(() => {
     currencyData().then(setCurrencies);
-    // or .then(setCurrency)
   }, []);
 
-  // useEffect(() => {
-  //   conversionData().then(setConversion);
-  //   // or .then(setCurrency)
-  // }, []);
-
-  console.log(currencies);
   return (
     <div className="w-full flex flex-col gap-12 py-10 2xl:px-80">
       <div className="w-full flex justify-center items-start">

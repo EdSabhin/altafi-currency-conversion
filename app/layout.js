@@ -19,7 +19,7 @@ export default function RootLayout({ children }) {
     <html lang="en" className={openSans.className} data-theme="winter">
       <head>
         <title>Fialta Currency Conversion & Data</title>
-        <link rel="icon" href="../public/AI-fialta-logo.png" />
+        <link rel="icon" href="/AI-fialta-logo.png" />
       </head>
       <body className="bg-slate-100">
         <main>
