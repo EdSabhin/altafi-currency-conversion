@@ -32,3 +32,19 @@
   }
 }
 
+@keyframes textIndigoToTeal {
+  0% {
+    color: #A3C6FF;
+  }
+  50% {
+    color: #5eead4;
+  }
+  100% {
+    color: #A3C6FF;
+  }
+}
+
+.text-indigo-to-teal {
+  animation: textIndigoToTeal 5s infinite alternate;
+}
+
