@@ -66,11 +66,11 @@ const CurrencyChart = () => {
           <h2>EUR against the World&apos;s Dollars</h2>
           <h3 className="mb-4">
             Period Selected:{" "}
-            <span className="pt-1 pb-2 px-3 mx-2 bg-gradient-to-b from-black to-blue-900 text-indigo-100 text-[1.25rem] underline underline-offset-4 decoration-1 decoration-dashed rounded-md">
+            <span className="pt-1 pb-2 px-3 mx-2 bg-animation text-indigo-200 text-[1.25rem] underline underline-offset-4 decoration-1 decoration-dashed rounded-md">
               {dateFrom}
             </span>{" "}
             to{" "}
-            <span className="pt-1 pb-2 px-3 mx-2 bg-gradient-to-b from-black to-blue-900 text-indigo-100 text-[1.25rem] underline underline-offset-4 decoration-1 decoration-dashed rounded-md">
+            <span className="pt-1 pb-2 px-3 mx-2 bg-animation text-indigo-200 text-[1.25rem] underline underline-offset-4 decoration-1 decoration-dashed rounded-md">
               {dateTo}
             </span>
           </h3>

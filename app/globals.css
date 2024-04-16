@@ -48,3 +48,19 @@
   animation: textIndigoToTeal 5s infinite alternate;
 }
 
+@keyframes bgChange {
+  0% {
+    background-color: #000000;
+  }
+  50% {
+    background-color: #062e70;
+  }
+  100% {
+    background-color: #000000;
+  }
+}
+
+.bg-animation {
+  animation: bgChange 5s infinite alternate;
+}
+
