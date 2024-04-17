@@ -39,10 +39,10 @@ const TopFive = () => {
           {/* head*/}
           <thead>
             <tr>
-              <th></th>
+              <th className="!rounded-none"></th>
               <th>Code</th>
               <th>Name</th>
-              <th>EUR Exchange Rate</th>
+              <th className="!rounded-none">EUR Exchange Rate</th>
             </tr>
           </thead>
           <tbody>

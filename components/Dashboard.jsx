@@ -1,6 +1,6 @@
 const Dashboard = ({ currencies }) => {
   return (
-    <div className="w-[19.3%] h-64 overflow-y-auto rounded-bl-md !rounded-br-none">
+    <div className="w-[20%] h-64 overflow-y-auto rounded-bl-md !rounded-br-none">
       <h2 className="flex justify-center px-2 py-2 z-10 rounded-tl-md bg-[#021431] text-indigo-to-teal">
         <span className="pr-2">*</span> Currency Code Reference <span className="pl-2">*</span>
       </h2>

@@ -1,12 +1,17 @@
+import { Orbitron } from "next/font/google";
+
+const orbitron = Orbitron({
+  subsets: ["latin"],
+  display: "swap",
+});
+
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   return (
     <footer className="footer justify-center items-center pt-8 pb-10 bg-neutral text-neutral-content text-md text-indigo-to-teal">
       <div className="flex items-center gap-20">
         <p>
-          <span className="uppercase">
-            Fialta Currency Conversion -
-          </span>{" "}
+          <span className={`${orbitron.className} uppercase tracking-widest`}>Fialta Currency Conversion -</span>{" "}
           {`Copyright © ${currentYear} - All rights reserved`}
         </p>
         <a
