@@ -14,7 +14,7 @@ const Footer = () => {
           target="_blank"
           className="hover:text-teal-200 hover:underline underline-offset-2 cursor-pointer"
         >
-          A project by Ed Sabhin
+          A Project by Ed Sabhin
         </a>
         <a
           href="https://github.com/EdSabhin/fialta-currency-conversion"
