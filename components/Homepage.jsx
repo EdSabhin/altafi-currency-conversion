@@ -15,12 +15,11 @@ const Homepage = () => {
   }, []);
 
   return (
-    <div className="w-full flex flex-col gap-12 py-10  2xl:px-80">
-      <div className="w-full flex justify-center items-start pt-10">
+    <div className=" md:w-full flex flex-col gap-20 md:gap-12 py-4 md:py-10 px-4 2xl:px-80">
+      <div className="w-full flex flex-col md:flex-row justify-center items-start pt-10">
         <Converter currencies={currencies} />
         <Dashboard currencies={currencies} />
       </div>
-
       <div className="w-full flex flex-col justify-center items-center gap-16">
         <CurrencyChart />
         <TopFive />

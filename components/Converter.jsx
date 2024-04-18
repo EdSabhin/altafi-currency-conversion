@@ -46,9 +46,9 @@ const Converter = ({ currencies }) => {
   console.log(selectTo);
 
   return (
-    <div className="w-[50%] flex flex-col items-start gap-24 pb-14">
-      <div className="flex flex-col gap-16">
-        <div className="flex items-end gap-10">
+    <div className="w-full md:w-[50%] 2xl:w-[47.9%] flex flex-col items-center md:items-start md:gap-14 pb-8">
+      <div className="flex flex-col gap-10 md:gap-16">
+        <div className="flex flex-col md:flex-row items-center md:items-end gap-0 md:gap-10">
           <Select
             title="From:"
             currencies={currencies}
@@ -63,21 +63,21 @@ const Converter = ({ currencies }) => {
             selectedValue={selectTo}
           />
         </div>
-        <div className="flex items-end gap-[4.5rem]">
+        <div className="w-full flex flex-col md:flex-row items-start md:items-end gap-10 md:gap-32">
           <CurrencyInput amount={setAmount} />
           <ConversionButton conversionData={handleConversion} />
         </div>
         {inputsNotValid && (
-          <div className="w-[96%] py-2 rounded-md bg-rose-100 text-rose-500 text-center">
+          <p className="w-full py-2 px-4 md:px-0 rounded-md bg-rose-100 text-rose-500 text-center">
             Please select both currencies and an amount to convert.
-          </div>
+          </p>
         )}
       </div>
       {conversion && currencyUnit && (
-        <div className="relative flex flex-col items-start gap-4 pt-7 pl-7 border-t-2 border-l-2 border-slate-200 rounded-tl-md">
+        <div className="w-full md:w-[68%] relative flex flex-col items-start gap-4 pt-20 md:pt-7 pl-7 mt-12 md:mt-0 mb-12 md:mb-0 border-t-2 border-l-2 border-slate-200 rounded-tl-md">
           <div
             onClick={() => setConversion("")}
-            className="absolute top-1 right-1 text-2xl text-slate-400 hover:text-blue-500 hover:animate-ping cursor-pointer transition duration-500"
+            className="absolute top-6 md:top-1 right-5 md:right-1 text-2xl text-slate-400 hover:text-blue-500 hover:animate-ping cursor-pointer transition duration-500"
           >
             x
           </div>

@@ -63,7 +63,7 @@ const CurrencyChart = () => {
     <div className="w-full md:w-[70%] h-full flex rounded-t-md">
       <div className="w-full h-full flex flex-col border border-slate-200 bg-white rounded-md">
         <div className="flex flex-col text-center md:text-start gap-8 py-6 md:px-5 text-2xl font-semibold bg-[#F2F7FF]">
-          <h2>EUR against the World&apos;s Dollars</h2>
+          <h2 className="px-2">EUR against the World&apos;s Dollars</h2>
           <h3 className="flex flex-col items-center md:flex-row gap-6 md:gap-0 mb-4">
             Period Selected:{" "}
             <span className="pt-1 pb-2 px-3 mx-2 bg-animation text-indigo-200 text-[1.25rem] underline underline-offset-4 decoration-1 decoration-dotted rounded-md">
