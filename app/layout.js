@@ -19,7 +19,7 @@ export default function RootLayout({ children }) {
     <html lang="en" className={lora.className} data-theme="winter">
       <head>
         <title>Fialta Currency Conversion & Data</title>
-        <link rel="icon" href="/fialta-logo-final.webp" />
+        <link rel="icon" href="/fialta-logo.svg" />
       </head>
       <body className="bg-slate-100">
         <main>
