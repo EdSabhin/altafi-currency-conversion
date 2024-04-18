@@ -5,7 +5,7 @@ const SwitchButton = ({ switchCurrencies }) => {
   return (
     <button onClick={switchCurrencies}>
       <svg
-        className="icon icon-tabler icon-tabler-arrows-exchange fade-in-out duration-1000 transition ease-in-out"
+        class="icon icon-tabler icon-tabler-arrows-exchange fade-in-out duration-1000 transition ease-in-out"
         xmlns="http://www.w3.org/2000/svg"
         width="50"
         height="50"

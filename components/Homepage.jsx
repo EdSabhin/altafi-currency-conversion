@@ -16,7 +16,7 @@ const Homepage = () => {
 
   return (
     <div className="w-full flex flex-col gap-12 py-10 2xl:px-80">
-      <div className="w-full flex justify-center items-start">
+      <div className="w-full flex justify-center items-start pt-10">
         <Converter currencies={currencies} />
         <Dashboard currencies={currencies} />
       </div>
