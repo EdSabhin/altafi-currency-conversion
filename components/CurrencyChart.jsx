@@ -60,11 +60,11 @@ const CurrencyChart = () => {
   };
 
   return (
-    <div className="w-[70%] h-full flex rounded-t-md">
+    <div className="w-full md:w-[70%] h-full flex rounded-t-md">
       <div className="w-full h-full flex flex-col border border-slate-200 bg-white rounded-md">
-        <div className="flex flex-col gap-8 py-6 pl-5 text-2xl font-semibold bg-[#F2F7FF]">
+        <div className="flex flex-col text-center md:text-start gap-8 py-6 md:px-5 text-2xl font-semibold bg-[#F2F7FF]">
           <h2>EUR against the World&apos;s Dollars</h2>
-          <h3 className="mb-4">
+          <h3 className="flex flex-col items-center md:flex-row gap-6 md:gap-0 mb-4">
             Period Selected:{" "}
             <span className="pt-1 pb-2 px-3 mx-2 bg-animation text-indigo-200 text-[1.25rem] underline underline-offset-4 decoration-1 decoration-dotted rounded-md">
               {dateFrom}
@@ -89,27 +89,31 @@ const CurrencyChart = () => {
           maxValue={2.75}
           allowDecimals={true}
         />
-        <div className="w-full flex justify-center items-center gap-8 pt-8 pb-12">
-          <div className="flex items-center relative">
-            <h4 className="py-1 px-8 border-l border-blue-500 rounded-md text-md font-semibold">
+        <div className="w-full flex flex-col md:flex-row justify-center items-center gap-8 pt-8 pb-12">
+          <div className="flex flex-col md:flex-row items-center">
+            <h4 className="flex items-center py-7 md:py-2 md:px-8 border-t md:border-t-0 border-blue-500 md:border-l rounded-md text-md font-semibold">
               Time Period
             </h4>
-            <p className="pb-1 text-3xl text-blue-700 animate-ping">→</p>
+            <p className="pb-1 mt-2 text-3xl text-blue-700 rotate-90 md:rotate-0 fade-in-out">
+              →
+            </p>
           </div>
-          <DateInput
-            title="From:"
-            setDate={setDateFrom}
-            value={dateFrom}
-            currentDate={formattedDate}
-            max={dateTo}
-          />
-          <DateInput
-            title="To:"
-            setDate={setDateTo}
-            value={dateTo}
-            min={dateFrom}
-            max={formattedDate}
-          />
+          <div className="flex flex-col md:flex-row gap-8 mb-3 md:mb-0">
+            <DateInput
+              title="From:"
+              setDate={setDateFrom}
+              value={dateFrom}
+              currentDate={formattedDate}
+              max={dateTo}
+            />
+            <DateInput
+              title="To:"
+              setDate={setDateTo}
+              value={dateTo}
+              min={dateFrom}
+              max={formattedDate}
+            />
+          </div>
         </div>
         <ResetButton resetDates={resetDates} />
       </div>
