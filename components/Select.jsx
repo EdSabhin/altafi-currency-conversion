@@ -17,7 +17,7 @@ const Select = ({ currencies, select, selectedValue, title }) => {
         className="select border-white"
       >
         <option value="">Select Currency</option>
-        {Object.keys(currencies).map((code) => (
+        {currencies && Object.keys(currencies).map((code) => (
           <option key={code} value={code}>
             {code}
           </option>

@@ -15,12 +15,17 @@ const Converter = ({ currencies }) => {
   const [amount, setAmount] = useState("");
   const [currencyUnit, setCurrencyUnit] = useState("");
   const [inputsNotValid, setInputsNotValid] = useState(false);
+  const [conversionError, setConversionError] = useState("")
 
   const handleConversion = () => {
+    if (selectFrom === selectTo) {
+      setConversionError("Please select 2 different currencies to convert.")
+      return;
+    }
     if (selectFrom === "" || selectTo === "" || amount === "") {
       setInputsNotValid(true)
     }
-      if (selectFrom !== "" && selectTo !== "" && amount !== "") {
+     else if (selectFrom !== "" && selectTo !== "" && amount !== "") {
         conversionData(amount, selectFrom, selectTo).then(setConversion);
         conversionData(1, selectFrom, selectTo).then(setCurrencyUnit);
         setInputsNotValid(false)
@@ -39,11 +44,6 @@ const Converter = ({ currencies }) => {
   };
 
   const date = new Date();
-
-  console.log(conversion);
-  console.log(amount);
-  console.log(selectFrom);
-  console.log(selectTo);
 
   return (
     <div className="w-full md:w-[50%] 2xl:w-[47.9%] flex flex-col items-center md:items-start md:gap-14 pb-8">
@@ -65,7 +65,7 @@ const Converter = ({ currencies }) => {
         </div>
         <div className="w-full flex flex-col md:flex-row items-start md:items-end gap-10 md:gap-32">
           <CurrencyInput amount={setAmount} />
-          <ConversionButton conversionData={handleConversion} />
+          <ConversionButton handleConversion={handleConversion} />
         </div>
         {inputsNotValid && (
           <p className="w-full py-2 px-4 md:px-0 rounded-md bg-rose-100 text-rose-500 text-center">
