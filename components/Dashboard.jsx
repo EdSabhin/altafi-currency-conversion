@@ -21,14 +21,20 @@ const Dashboard = ({ currencies }) => {
         <table className="w-full table table-compact !rounded-br-none">
           <thead>
             <tr className="sticky top-0">
-              <th className="text-[0.9rem] pt-3 !rounded-none">Code</th>
-              <th className="text-[0.9rem] pt-3 !rounded-none">Name</th>
+              <th className="font-bold text-[0.9rem] pt-3 !rounded-none">
+                Code
+              </th>
+              <th className="font-bold text-[0.9rem] pt-3 !rounded-none">
+                Name
+              </th>
             </tr>
           </thead>
           <tbody className="!rounded-br-none">
             {Object.entries(currencies).map(([code, name]) => (
               <tr key={code}>
-                <td className="py-3 !rounded-br-none">{code}</td>
+                <td className="font-semibold py-3 px-3 !rounded-br-none">
+                  {code}
+                </td>
                 <td className="!rounded-br-none">{name}</td>
               </tr>
             ))}
