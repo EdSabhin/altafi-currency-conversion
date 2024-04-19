@@ -16,7 +16,7 @@ const Homepage = () => {
   }, []);
 
   return (
-    <div className=" md:w-full flex flex-col gap-20 md:gap-12 py-4 md:py-10 px-4 2xl:px-80">
+    <div className=" md:w-full flex flex-col gap-20 md:gap-12 py-4 md:py-10 px-4 2xl:px-44">
       <div className="w-full flex flex-col md:flex-row justify-center items-start pt-10">
         <Converter currencies={currencies} />
         <Dashboard currencies={currencies} />

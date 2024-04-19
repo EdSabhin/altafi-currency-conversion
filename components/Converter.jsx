@@ -47,7 +47,7 @@ const Converter = ({ currencies }) => {
 
   return (
     <div className="w-full md:w-[50%] 2xl:w-[47.9%] flex flex-col items-center md:items-start md:gap-14 pb-8">
-      <div className="flex flex-col gap-10 md:gap-16">
+      <div className="w-full md:w-auto flex flex-col gap-10 md:gap-16">
         <div className="flex flex-col md:flex-row items-center md:items-end gap-0 md:gap-10">
           <Select
             title="From:"
