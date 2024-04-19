@@ -6,6 +6,7 @@ import Converter from "./Converter";
 import Dashboard from "./Dashboard";
 import CurrencyChart from "./CurrencyChart";
 import TopFive from "./TopFive";
+import Image from "next/image";
 
 const Homepage = () => {
   const [currencies, setCurrencies] = useState("");

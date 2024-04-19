@@ -74,7 +74,7 @@ const Converter = ({ currencies }) => {
         )}
       </div>
       {conversion && currencyUnit && (
-        <div className="w-full md:w-[68%] relative flex flex-col items-start gap-4 pt-20 md:pt-7 pl-7 mt-12 md:mt-0 mb-12 md:mb-0 border-t-2 border-l-2 border-slate-200 rounded-tl-md">
+        <div className="w-full md:w-[68%] relative flex flex-col items-start gap-4 pt-20 md:pt-7 pl-7 mt-14 md:mt-0 mb-6 md:mb-0 border-t-2 border-l-2 border-slate-200 rounded-tl-md">
           <div
             onClick={() => setConversion("")}
             className="absolute top-6 md:top-1 right-5 md:right-1 text-2xl text-slate-400 hover:text-blue-500 hover:animate-ping cursor-pointer transition duration-500"

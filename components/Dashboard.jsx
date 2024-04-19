@@ -1,12 +1,13 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 
 const Dashboard = ({ currencies }) => {
   const [viewDashboard, setViewDashboard] = useState(true);
 
   return (
-    <div className="w-full md:w-[20%] 2xl:w-[22%] h-64 overflow-y-auto rounded-bl-md !rounded-br-none">
+    <div className="w-full relative md:w-[20%] 2xl:w-[22%] h-64 overflow-y-auto rounded-bl-md !rounded-br-none mt-8 md:mt-0">
       <h2
         onClick={() => setViewDashboard(!viewDashboard)}
         className={`flex justify-center px-2 py-2 z-10 rounded-tl-md ${
@@ -33,6 +34,15 @@ const Dashboard = ({ currencies }) => {
             ))}
           </tbody>
         </table>
+      )}
+      {!viewDashboard && (
+        <Image
+          src="/fialta-logo.svg"
+          alt="Fialta Logo"
+          width={80}
+          height={80}
+          className="absolute top-[70%] md:top-[35%] left-[38%] animate-pulse"
+        />
       )}
     </div>
   );
