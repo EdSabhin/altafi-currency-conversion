@@ -49,37 +49,58 @@ const TopFive = () => {
             {/* row 1 */}
             <tr>
               <th>1</th>
-              <td>USD</td>
+              <td className="font-semibold">USD</td>
               <td>United States Dollar</td>
-              {USD && <td>€ {USD.rates["EUR"]}</td>}
+              {USD && (
+                <td>
+                  <span className="font-bold">€ </span> {USD.rates["EUR"]}
+                </td>
+              )}
             </tr>
             {/* row 2 */}
             <tr className="active">
               <th>2</th>
-              <td>JPY</td>
+              <td className="font-semibold">JPY</td>
               <td>Japanese Yen</td>
-              {JPY && <td>€ {JPY.rates["EUR"]}</td>}
+              {JPY && (
+                <td>
+                  <span className="font-bold">€ </span> {JPY.rates["EUR"]}
+                </td>
+              )}
             </tr>
             {/* row 3 */}
             <tr>
               <th>3</th>
-              <td>GBP</td>
+              <td className="font-semibold">GBP</td>
               <td>British Pound</td>
-              {GBP && <td>€ {GBP.rates["EUR"]}</td>}
+              {GBP && (
+                <td>
+                  <span className="font-bold">€ </span> {GBP.rates["EUR"]}
+                </td>
+              )}
             </tr>
             {/* row 4 */}
             <tr className="active">
               <th>4</th>
-              <td>AUD</td>
+              <td className="font-semibold">AUD</td>
               <td>Australian Dollar</td>
-              {AUD && <td>€ {AUD.rates["EUR"]}</td>}
+              {AUD && (
+                <td>
+                  <span className="font-bold">€ </span> {AUD.rates["EUR"]}
+                </td>
+              )}
             </tr>
             {/* row 5 */}
             <tr>
               <th>5</th>
-              <td>CAD</td>
+              <td className="font-semibold">CAD</td>
               <td>Canadian Dollar</td>
-              {CAD && <td>€ {CAD.rates["EUR"]}</td>}
+              {CAD && (
+                <td>
+                  <span className="font-bold">€ </span>
+                  {CAD.rates["EUR"]}
+                </td>
+              )}
             </tr>
           </tbody>
         </table>
