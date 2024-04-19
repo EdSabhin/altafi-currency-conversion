@@ -15,21 +15,26 @@ const Converter = ({ currencies }) => {
   const [amount, setAmount] = useState("");
   const [currencyUnit, setCurrencyUnit] = useState("");
   const [inputsNotValid, setInputsNotValid] = useState(false);
-  const [conversionError, setConversionError] = useState("")
+  const [conversionError, setConversionError] = useState("");
 
   const handleConversion = () => {
     if (selectFrom === selectTo) {
-      setConversionError("Please select 2 different currencies to convert.")
+      setInputsNotValid(true);
+      setConversionError("Please select 2 distinct currencies to convert.");
+      return;
+    } else if (selectFrom === "" || selectTo === "") {
+      setInputsNotValid(true);
+      setConversionError("Please select the 2 currencies to convert.");
+      return;
+    } else if (amount !== "") {
+      setConversionError("Please select an amount.")
       return;
     }
-    if (selectFrom === "" || selectTo === "" || amount === "") {
-      setInputsNotValid(true)
+     else if (selectFrom !== selectTo && selectFrom !== "" && selectTo !== "" && amount !== "") {
+      conversionData(amount, selectFrom, selectTo).then(setConversion);
+      conversionData(1, selectFrom, selectTo).then(setCurrencyUnit);
+      setInputsNotValid(false);
     }
-     else if (selectFrom !== "" && selectTo !== "" && amount !== "") {
-        conversionData(amount, selectFrom, selectTo).then(setConversion);
-        conversionData(1, selectFrom, selectTo).then(setCurrencyUnit);
-        setInputsNotValid(false)
-      } 
   };
 
   useEffect(() => {
@@ -69,7 +74,7 @@ const Converter = ({ currencies }) => {
         </div>
         {inputsNotValid && (
           <p className="w-full py-2 px-4 md:px-0 rounded-md bg-rose-100 text-rose-500 text-center">
-            Please select both currencies and an amount to convert.
+            {conversionError}
           </p>
         )}
       </div>
