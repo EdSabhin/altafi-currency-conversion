@@ -1,14 +1,16 @@
 import React from "react";
 
-const ConversionButton = ({ handleConversion }) => {
+const ConversionButton = ({ handleConversion, setConversionClicked }) => {
   return (
-      <button
-        onClick={() => handleConversion()}
-        className="w-full md:w-[35.9%] btn hover:text-teal-300
+    <button
+      onClick={() => {
+        handleConversion(), setConversionClicked(true);
+      }}
+      className="w-full md:w-[35.9%] btn hover:text-teal-300
         active:text-white active:bg-blue-200 active:scale-105 duration-800 transition-all"
-      >
-        Convert
-      </button> 
+    >
+      Convert
+    </button>
   );
 };
 

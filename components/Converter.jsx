@@ -14,10 +14,12 @@ const Converter = ({ currencies }) => {
   const [selectTo, setSelectTo] = useState("");
   const [amount, setAmount] = useState("");
   const [currencyUnit, setCurrencyUnit] = useState("");
+  const [conversionClicked, setConversionClicked] = useState(false);
   const [inputsNotValid, setInputsNotValid] = useState(false);
   const [conversionError, setConversionError] = useState("");
 
   const handleConversion = () => {
+    // Inputs are valid
     if (
       selectFrom !== "" &&
       selectTo !== "" &&
@@ -28,31 +30,33 @@ const Converter = ({ currencies }) => {
       conversionData(1, selectFrom, selectTo).then(setCurrencyUnit);
       setInputsNotValid(false);
       return;
+      // Inputs are not valid
     } else if (selectFrom === "" && selectTo === "") {
       setInputsNotValid(true);
-      setConversionError("Please select the target currencies to convert.")
+      setConversionError("Please select the target currencies to convert.");
+      return;
     } else if (selectFrom !== "" && selectTo === "") {
       setInputsNotValid(true);
-      setConversionError("Please ensure currencies are selected on both ends.")
+      setConversionError("Please select currencies on both ends.");
+      return;
     } else if (selectFrom === "" && selectTo !== "") {
       setInputsNotValid(true);
-      setConversionError("Please ensure currencies are selected on both ends.");
-    }
-    else if (selectFrom === selectTo) {
+      setConversionError("Please select currencies on both ends.");
+      return;
+    } else if (selectFrom === selectTo) {
       setInputsNotValid(true);
-      setConversionError("Please select 2 distinct currencies to convert.")
+      setConversionError("Please select 2 distinct currencies to convert.");
       return;
     } else if (amount === "") {
       setInputsNotValid(true);
-      setConversionError("Please provide an amount to convert.")
+      setConversionError("Please provide an amount to convert.");
+      return;
     }
   };
 
   useEffect(() => {
-    if (selectFrom !== "" && selectTo !== "") {
-      handleConversion();
-    }
-  }, [selectFrom, selectTo]);
+    !inputsNotValid && conversionClicked && handleConversion();
+  }, [selectFrom, selectTo, amount]);
 
   const switchCurrencies = () => {
     setSelectFrom(selectTo);
@@ -81,7 +85,10 @@ const Converter = ({ currencies }) => {
         </div>
         <div className="w-full flex flex-col md:flex-row items-start md:items-end gap-10 md:gap-32">
           <CurrencyInput amount={setAmount} />
-          <ConversionButton handleConversion={handleConversion} />
+          <ConversionButton
+            handleConversion={handleConversion}
+            setConversionClicked={setConversionClicked}
+          />
         </div>
         {inputsNotValid && (
           <p className="w-full py-2 px-4 md:px-0 rounded-md bg-rose-100 text-rose-500 text-center">
