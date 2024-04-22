@@ -22,8 +22,6 @@ const TopFive = () => {
     conversionData(1, "CAD", "EUR").then(setCAD);
   }, []);
 
-  console.log(USD, GBP, JPY);
-
   return (
     <div className="w-full md:w-[70%] flex overflow-x-auto bg-[#F1F5F9] rounded-md">
       <div className="w-full flex flex-col md:flex-row mb-12 border-t border-blue-700">

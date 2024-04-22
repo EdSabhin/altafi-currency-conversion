@@ -18,19 +18,12 @@ const Converter = ({ currencies }) => {
   const [conversionError, setConversionError] = useState("");
 
   const handleConversion = () => {
-    if (selectFrom === selectTo) {
-      setInputsNotValid(true);
-      setConversionError("Please select 2 distinct currencies to convert.");
-      return;
-    } else if (selectFrom === "" || selectTo === "") {
-      setInputsNotValid(true);
-      setConversionError("Please select the 2 currencies to convert.");
-      return;
-    } else if (amount !== "") {
-      setConversionError("Please select an amount.")
-      return;
-    }
-     else if (selectFrom !== selectTo && selectFrom !== "" && selectTo !== "" && amount !== "") {
+    if (
+      selectFrom !== "" &&
+      selectTo !== "" &&
+      amount !== "" &&
+      selectFrom !== selectTo
+    ) {
       conversionData(amount, selectFrom, selectTo).then(setConversion);
       conversionData(1, selectFrom, selectTo).then(setCurrencyUnit);
       setInputsNotValid(false);
