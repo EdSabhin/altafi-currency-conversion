@@ -27,6 +27,24 @@ const Converter = ({ currencies }) => {
       conversionData(amount, selectFrom, selectTo).then(setConversion);
       conversionData(1, selectFrom, selectTo).then(setCurrencyUnit);
       setInputsNotValid(false);
+      return;
+    } else if (selectFrom === "" && selectTo === "") {
+      setInputsNotValid(true);
+      setConversionError("Please select the target currencies to convert.")
+    } else if (selectFrom !== "" && selectTo === "") {
+      setInputsNotValid(true);
+      setConversionError("Please ensure currencies are selected on both ends.")
+    } else if (selectFrom === "" && selectTo !== "") {
+      setInputsNotValid(true);
+      setConversionError("Please ensure currencies are selected on both ends.");
+    }
+    else if (selectFrom === selectTo) {
+      setInputsNotValid(true);
+      setConversionError("Please select 2 distinct currencies to convert.")
+      return;
+    } else if (amount === "") {
+      setInputsNotValid(true);
+      setConversionError("Please provide an amount to convert.")
     }
   };
 
@@ -71,7 +89,7 @@ const Converter = ({ currencies }) => {
           </p>
         )}
       </div>
-      {conversion && currencyUnit && (
+      {conversion && currencyUnit && !inputsNotValid && (
         <div className="w-full md:w-[68%] relative flex flex-col items-start gap-4 pt-20 md:pt-7 pl-7 mt-14 md:mt-0 mb-6 md:mb-0 border-t-2 border-l-2 border-slate-200 rounded-tl-md">
           <div
             onClick={() => setConversion("")}
