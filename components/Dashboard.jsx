@@ -48,7 +48,7 @@ const Dashboard = ({ currencies }) => {
           alt="Fialta Logo"
           width={80}
           height={80}
-          className="absolute top-[60%] lg:top-[39%] left-[39%] md:left-[43%] lg:left-[29%] xl:left-[35.5%] 2xl:left-[] animate-pulse"
+          className="absolute top-[60%] lg:top-[48%] left-[39%] md:left-[43%] lg:left-[29%] xl:left-[35.5%] 2xl:left-[42%] animate-pulse"
         />
       )}
     </div>
