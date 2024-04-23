@@ -67,7 +67,7 @@ const Converter = ({ currencies }) => {
 
   return (
     <div className="w-full lg:w-[65%] xl:w-[50%] 2xl:w-[47.9%] flex flex-col items-center lg:items-start md:gap-14 pb-8 md:pb-12">
-      <div className="w-full md:w-auto flex flex-col gap-10 md:gap-16">
+      <div className="w-full md:w-[70%] flex flex-col gap-10 md:gap-16">
         <div className="flex flex-col md:flex-row items-center md:items-end gap-0 md:gap-10">
           <Select
             title="From:"
@@ -83,7 +83,7 @@ const Converter = ({ currencies }) => {
             selectedValue={selectTo}
           />
         </div>
-        <div className="w-full flex flex-col md:flex-row items-start md:items-end gap-10 md:gap-32">
+        <div className="w-full flex flex-col md:flex-row items-start md:items-end gap-10 md:gap-[8.45rem] lg:gap-32">
           <CurrencyInput amount={setAmount} />
           <ConversionButton
             handleConversion={handleConversion}
@@ -112,9 +112,9 @@ const Converter = ({ currencies }) => {
           <h4 className="text-gray-400">{`Current Exchange Rate: 1 ${
             conversion.base ?? ""
           } to ${currencyUnit.rates[selectTo] ?? ""} ${selectTo ?? ""}`}</h4>
-          <div className="flex gap-2">
+          <div className="flex flex-wrap gap-2">
             <h2 className="text-3xl">{`${selectTo ?? ""}`}</h2>
-            <h2 className="text-3xl">{`${
+            <h2 className="w-max flex flex-shrink-0 text-3xl">{`${
               conversion?.rates[selectTo] ?? ""
             }`}</h2>
           </div>
