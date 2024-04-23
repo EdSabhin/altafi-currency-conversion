@@ -2,7 +2,7 @@ import React from "react";
 
 const DateInput = ({ setDate, value, max, min, currentDate, title }) => {
   return (
-    <div className="flex flex-col md:flex-row items-center gap-6">
+    <div className="flex flex-col lg:flex-row items-center gap-6">
       <p className="font-semibold">{title}</p>
       <input
         type="date"

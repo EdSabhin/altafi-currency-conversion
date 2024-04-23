@@ -7,7 +7,7 @@ const Dashboard = ({ currencies }) => {
   const [viewDashboard, setViewDashboard] = useState(true);
 
   return (
-    <div className="w-full relative md:w-[20%] 2xl:w-[22%] h-64 overflow-y-auto rounded-bl-md !rounded-br-none mt-8 md:mt-0">
+    <div className="w-full md:w-[70%] lg:w-[20%] 2xl:w-[22%] h-64 relative overflow-y-auto rounded-bl-md !rounded-br-none mt-8 lg:mt-0">
       <h2
         onClick={() => setViewDashboard(!viewDashboard)}
         className={`flex justify-center px-2 py-2 z-10 rounded-tl-md ${
@@ -30,14 +30,15 @@ const Dashboard = ({ currencies }) => {
             </tr>
           </thead>
           <tbody className="!rounded-br-none">
-            {Object.entries(currencies).map(([code, name]) => (
-              <tr key={code}>
-                <td className="font-semibold py-3 px-3 !rounded-br-none">
-                  {code}
-                </td>
-                <td className="!rounded-br-none">{name}</td>
-              </tr>
-            ))}
+            {currencies &&
+              Object.entries(currencies).map(([code, name]) => (
+                <tr key={code}>
+                  <td className="font-semibold py-3 px-3 !rounded-br-none">
+                    {code}
+                  </td>
+                  <td className="!rounded-br-none">{name}</td>
+                </tr>
+              ))}
           </tbody>
         </table>
       )}
@@ -47,7 +48,7 @@ const Dashboard = ({ currencies }) => {
           alt="Fialta Logo"
           width={80}
           height={80}
-          className="absolute top-[60%] md:top-[39%] left-[39%] md:left-[35.5%] animate-pulse"
+          className="absolute top-[60%] lg:top-[39%] left-[39%] md:left-[43%] lg:left-[29%] xl:left-[35.5%] animate-pulse"
         />
       )}
     </div>

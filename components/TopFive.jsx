@@ -23,13 +23,13 @@ const TopFive = () => {
   }, []);
 
   return (
-    <div className="w-full md:w-[70%] flex overflow-x-auto bg-[#F1F5F9] rounded-md">
+    <div className="w-full md:w-[70%] lg:w-[85%] xl:w-[70%] flex overflow-x-auto bg-[#F1F5F9] rounded-md">
       <div className="w-full flex flex-col md:flex-row mb-12 border-t border-blue-700">
-        <div className="h-[10.1rem] flex flex-col bg-[#F2F7FF]">
+        <div className="h-[13.5rem] md:h-[10.1rem] flex flex-col bg-[#F2F7FF]">
           <h2 className="pt-4 pl-5 text-2xl text-blue-500 font-semibold rounded-md underline underline-offset-4 decoration-1 decoration-dotted">
             {fullDate}
           </h2>
-          <h2 className="w-[74%] pt-6 px-5 text-xl text-slate-600 font-semibold">
+          <h2 className="w-[74%] pt-6 px-5  text-xl text-slate-600 font-semibold">
             Top 5 Currencies by Trading Volume Against the Euro (EUR)
           </h2>
         </div>

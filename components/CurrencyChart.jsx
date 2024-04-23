@@ -60,7 +60,7 @@ const CurrencyChart = () => {
   };
 
   return (
-    <div className="w-full md:w-[70%] h-full flex rounded-t-md">
+    <div className="w-full md:w-[70%] lg:w-[85%] xl:w-[70%] h-full flex rounded-t-md">
       <div className="w-full h-full flex flex-col border border-slate-200 bg-white rounded-md">
         <div className="flex flex-col text-center md:text-start gap-8 py-6 md:px-5 text-2xl font-semibold bg-[#F2F7FF]">
           <h2 className="px-2">EUR against the World&apos;s Dollars</h2>
@@ -89,16 +89,16 @@ const CurrencyChart = () => {
           maxValue={2.75}
           allowDecimals={true}
         />
-        <div className="w-full flex flex-col md:flex-row justify-center items-center gap-8 pt-8 pb-12">
-          <div className="flex flex-col md:flex-row items-center">
-            <h4 className="flex items-center py-7 md:py-2 md:px-8 border-t md:border-t-0 border-blue-500 md:border-l rounded-md text-md font-semibold">
+        <div className="w-full flex flex-col lg:flex-row justify-center items-center gap-8 pt-8 pb-12">
+          <div className="flex flex-col lg:flex-row items-center">
+            <h4 className="flex items-center py-7 md:pt-10 lg:py-2 lg:px-8 border-t lg:border-t-0 border-blue-500 lg:border-l rounded-md text-md font-semibold">
               Time Period
             </h4>
-            <p className="pb-1 mt-2 text-3xl text-blue-700 rotate-90 md:rotate-0 fade-in-out">
+            <p className="pb-1 mt-2 text-3xl text-blue-700 rotate-90 lg:rotate-0 fade-in-out">
               →
             </p>
           </div>
-          <div className="flex flex-col md:flex-row gap-8 mb-3 md:mb-0">
+          <div className="flex flex-col lg:flex-row gap-8 mb-3 lg:mb-0">
             <DateInput
               title="From:"
               setDate={setDateFrom}
