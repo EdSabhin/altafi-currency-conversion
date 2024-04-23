@@ -1,7 +1,6 @@
 "use client";
 
-import React, { useEffect } from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Select from "./Select";
 import CurrencyInput from "./CurrencyInput";
 import ConversionButton from "./ConversionButton";
@@ -84,7 +83,7 @@ const Converter = ({ currencies }) => {
           />
         </div>
         <div className="w-full flex flex-col md:flex-row items-start md:items-end 2xl:items-end gap-10 md:gap-[8.45rem] lg:gap-32">
-          <CurrencyInput amount={setAmount} />
+          <CurrencyInput amount={setAmount} handleConversion={handleConversion}/>
           <ConversionButton
             handleConversion={handleConversion}
             setConversionClicked={setConversionClicked}

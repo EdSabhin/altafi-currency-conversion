@@ -1,6 +1,6 @@
 import React from "react";
 
-const CurrencyInput = ({ amount }) => {
+const CurrencyInput = ({ amount, handleConversion }) => {
   function handleInputChange(event) {
     const input = event.target;
     const value = input.value;
@@ -8,6 +8,13 @@ const CurrencyInput = ({ amount }) => {
     input.value = numbersOnly;
     amount(numbersOnly);
   }
+
+  function handleKeyPress(event) {
+    if (event.key === "Enter") {
+      handleConversion();
+    }
+  }
+
   return (
     <div className="w-full md:w-[36.4%] flex flex-col gap-2">
       <p className="font-semibold">Amount:</p>
@@ -17,6 +24,9 @@ const CurrencyInput = ({ amount }) => {
         className="input border-white"
         onChange={(e) => {
           handleInputChange(e);
+        }}
+        onKeyUp={(e) => {
+          handleKeyPress(e);
         }}
       />
     </div>
