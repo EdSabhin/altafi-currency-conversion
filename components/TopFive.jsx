@@ -51,7 +51,7 @@ const TopFive = () => {
               <td>United States Dollar</td>
               {USD && (
                 <td>
-                  <span className="font-bold">€ </span> {USD.rates["EUR"]}
+                  <span className="font-bold">€ </span> {USD?.rates["EUR"]}
                 </td>
               )}
             </tr>
@@ -62,7 +62,7 @@ const TopFive = () => {
               <td>Japanese Yen</td>
               {JPY && (
                 <td>
-                  <span className="font-bold">€ </span> {JPY.rates["EUR"]}
+                  <span className="font-bold">€ </span> {JPY?.rates["EUR"]}
                 </td>
               )}
             </tr>
@@ -73,7 +73,7 @@ const TopFive = () => {
               <td>British Pound</td>
               {GBP && (
                 <td>
-                  <span className="font-bold">€ </span> {GBP.rates["EUR"]}
+                  <span className="font-bold">€ </span> {GBP?.rates["EUR"]}
                 </td>
               )}
             </tr>
@@ -84,7 +84,7 @@ const TopFive = () => {
               <td>Australian Dollar</td>
               {AUD && (
                 <td>
-                  <span className="font-bold">€ </span> {AUD.rates["EUR"]}
+                  <span className="font-bold">€ </span> {AUD?.rates["EUR"]}
                 </td>
               )}
             </tr>
@@ -96,7 +96,7 @@ const TopFive = () => {
               {CAD && (
                 <td>
                   <span className="font-bold">€ </span>
-                  {CAD.rates["EUR"]}
+                  {CAD?.rates["EUR"]}
                 </td>
               )}
             </tr>
