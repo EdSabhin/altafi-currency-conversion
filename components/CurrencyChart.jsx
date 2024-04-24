@@ -36,7 +36,7 @@ const CurrencyChart = () => {
 
   let ratesHistory = "";
 
-  if (dateData.rates) {
+  if (dateData?.rates) {
     ratesHistory = Object.entries(dateData.rates).map(([date, rates]) => ({
       date,
       USD: rates.USD,
@@ -44,7 +44,7 @@ const CurrencyChart = () => {
       AUD: rates.AUD,
       NZD: rates.NZD,
     }));
-  } else if (history.rates) {
+  } else if (history?.rates) {
     ratesHistory = Object.entries(history.rates).map(([date, rates]) => ({
       date,
       USD: rates.USD,
