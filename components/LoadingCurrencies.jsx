@@ -9,10 +9,10 @@ const orbitron = Orbitron({
 
 const LoadingCurrencies = () => {
   return (
-    <div className="w-full h-[77vh] md:h-[68vh] lg:h-[73vh] loading-animation gradient-border rainbow-text flex justify-center items-center">
+    <div className="w-full h-[77vh] md:h-[68vh] lg:h-[73vh] loading-animation gradient-border flex justify-center items-center">
       <div className="w-full flex flex-col md:flex-row justify-center items-center md:gap-4">
         <p
-          className={`${orbitron.className} flex justify-center items-center py-8 md:px-0 underline underline-offset-4 decoration-1 decoration-dotted text-2xl `}
+          className={`${orbitron.className} loading-text flex justify-center items-center py-8 md:px-0 underline underline-offset-4 decoration-1 decoration-dotted text-2xl `}
         >
           Loading Currencies
         </p>
@@ -26,7 +26,7 @@ const LoadingCurrencies = () => {
           stroke-width="2"
           stroke-linecap="round"
           stroke-linejoin="round"
-          class="icon icon-tabler icons-tabler-outline icon-tabler-tornado"
+          class="icon icon-tabler icons-tabler-outline icon-tabler-tornado loading-text"
         >
           <path stroke="none" d="M0 0h24v24H0z" fill="none" />
           <path d="M21 4l-18 0" />
