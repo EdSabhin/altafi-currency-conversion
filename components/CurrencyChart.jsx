@@ -62,16 +62,18 @@ const CurrencyChart = () => {
   return (
     <div className="w-full md:w-[70%] lg:w-[85%] xl:w-[70%] h-full flex rounded-t-md">
       <div className="w-full h-full flex flex-col border border-slate-200 bg-white rounded-md">
-        <div className="flex flex-col text-center md:text-start gap-8 py-6 md:px-5 text-2xl font-semibold bg-[#F2F7FF]">
+        <div className="w-full flex flex-col text-center lg:text-start gap-8 py-6 md:px-5 text-2xl font-semibold bg-[#F2F7FF]">
           <h2 className="px-2">EUR against Western Dollars</h2>
-          <h3 className="flex flex-col items-center md:flex-row gap-6 md:gap-0 mb-4">
+          <h3 className="pl-2 flex flex-col lg:flex-row items-center gap-6 lg:gap-4 mb-4">
             Period Selected:{" "}
-            <span className="pt-1 pb-2 px-3 mx-2 bg-animation text-indigo-200 text-[1.25rem] underline underline-offset-4 decoration-1 decoration-dotted rounded-md">
-              {dateFrom}
-            </span>{" "}
-            to{" "}
-            <span className="pt-1 pb-2 px-3 mx-2 bg-animation text-indigo-200 text-[1.25rem] underline underline-offset-4 decoration-1 decoration-dotted rounded-md">
-              {dateTo}
+            <span className="flex flex-col md:flex-row gap-4 lg:gap-3 items-center">
+              <span className="pt-1 pb-2 px-3 bg-[#021431] text-pulse text-[#a3c6ff] text-[1.25rem] underline underline-offset-4 decoration-1 decoration-dotted rounded-[0.3rem]">
+                {dateFrom}
+              </span>{" "}
+              to{" "}
+              <span className="pt-1 pb-2 px-3 bg-[#021431] text-pulse-stagger text-[#a3c6ff] text-[1.25rem] underline underline-offset-4 decoration-1 decoration-dotted rounded-[0.3rem]">
+                {dateTo}
+              </span>
             </span>
           </h3>
         </div>

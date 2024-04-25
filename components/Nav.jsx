@@ -10,7 +10,7 @@ const orbitron = Orbitron({
 const Nav = () => {
   return (
     <div
-      className={`navbar ${orbitron.className} w-full flex flex-col md:flex-row justify-center items-center py-10 md:py-8 gap-8 bg-neutral text-neutral-content`}
+      className={`navbar ${orbitron.className} w-full flex flex-col justify-center items-center py-10 md:py-8 gap-8 bg-neutral text-neutral-content`}
     >
       <Image
         src="/fialta-logo.svg"

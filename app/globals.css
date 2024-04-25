@@ -30,7 +30,6 @@
   border-image-slice: 1;
 }
 
-
 .fade-in-out {
   animation: fadeInOut 1s ease infinite alternate; /* Animation duration: 2 seconds */
 }
@@ -89,12 +88,40 @@
   animation: loadingAnimation 0.8s infinite alternate-reverse;
 }
 
+
+@keyframes loadingText {
+  0% {
+    color: #a3c6ff;
+  }
+  50% {
+    color: rgb(250, 237, 252);
+  }
+  100% {
+    color: #a3c6ff;
+  }
+}
+
 .loading-text {
   animation: loadingText 1.6s infinite;
 }
 
-@keyframes loadingText  {
-  0% { color: #A3C6FF }
-  50% { color: white; }
-  100% { color: #A3C6FF }
+@keyframes textPulse {
+  0% {
+    color: #a3c6ff;
+  }
+  50% {
+    color: #9dfff0;
+  }
+  100% {
+    color: #a3c6ff;
+  }
+}
+
+.text-pulse {
+  animation: textPulse 6s infinite;
+}
+
+.text-pulse-stagger {
+  animation: textPulse 6s infinite;
+  animation-delay: 3s;
 }
