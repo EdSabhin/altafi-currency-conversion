@@ -17,7 +17,7 @@ const Homepage = () => {
     setTimeout(() => {
       currencyData().then(setCurrencies);
       setLoadingCurrencies(false);
-    }, 3500);
+    }, 4000);
   }, []);
 
   return (
