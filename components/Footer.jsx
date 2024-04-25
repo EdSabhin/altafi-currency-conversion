@@ -9,7 +9,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
   return (
     <footer className="footer justify-center items-center pt-10 md:pt-8 pb-16 md:pb-10 bg-neutral text-neutral-content text-md text-indigo-to-teal">
-      <div className="flex flex-col md:flex-row items-center px-12 md:px-0 text-center gap-20">
+      <div className="flex flex-col md:flex-row items-center px-12 xl:px-0 text-center gap-20">
         <p>
           <span className={`${orbitron.className} uppercase tracking-widest`}>Fialta Currency Conversion -</span>{" "}
           {`Copyright © ${currentYear} - All rights reserved`}

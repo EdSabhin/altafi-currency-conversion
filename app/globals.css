@@ -23,6 +23,14 @@
   );
 }
 
+.gradient-border {
+  border-right: 6px solid;
+  border-left: 6px solid;
+  border-image: linear-gradient(to bottom, #3b329d, #0ed1ce);
+  border-image-slice: 1;
+}
+
+
 .fade-in-out {
   animation: fadeInOut 1s ease infinite alternate; /* Animation duration: 2 seconds */
 }
@@ -79,4 +87,14 @@
 
 .loading-animation {
   animation: loadingAnimation 0.8s infinite alternate-reverse;
+}
+
+.loading-text {
+  animation: loadingText 1.6s infinite;
+}
+
+@keyframes loadingText  {
+  0% { color: #A3C6FF }
+  50% { color: white; }
+  100% { color: #A3C6FF }
 }

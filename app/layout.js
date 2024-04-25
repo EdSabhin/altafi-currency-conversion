@@ -21,7 +21,7 @@ export default function RootLayout({ children }) {
         <title>Fialta Currency Conversion & Data</title>
         <link rel="icon" href="/fialta-logo.svg" />
       </head>
-      <body className="bg-slate-100">
+      <body className="bg-[#F1F5F9]">
         <main>
           <Nav />
           {children}
