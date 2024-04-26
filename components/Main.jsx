@@ -14,6 +14,7 @@ const Main = () => {
   const [loadingCurrencies, setLoadingCurrencies] = useState(true);
 
   useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
     currencyData().then(setCurrencies);
     setTimeout(() => {
       setLoadingCurrencies(false);
