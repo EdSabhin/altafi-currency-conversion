@@ -7,7 +7,7 @@ const Dashboard = ({ currencies }) => {
   const [viewDashboard, setViewDashboard] = useState(true);
 
   return (
-    <div className="w-full md:w-[70%] lg:w-[25%] xl:w-[19.7%] 2xl:w-[22%] h-64 relative overflow-y-auto rounded-bl-md !rounded-br-none mt-8 lg:mt-0">
+    <div className="w-full md:w-[70%] lg:w-[25%] xl:w-[19.7%] 2xl:w-[22%] h-64 relative overflow-y-auto rounded-bl-md !rounded-br-none mt-8">
       <h2
         onClick={() => setViewDashboard(!viewDashboard)}
         className={`flex justify-center items-center text-center px-4 md:px-2 py-3 z-10 rounded-tl-md ${
@@ -48,7 +48,7 @@ const Dashboard = ({ currencies }) => {
           alt="Fialta Logo"
           width={80}
           height={80}
-          className="absolute top-[60%] lg:top-[48%] left-[39%] md:left-[43%] lg:left-[29%] xl:left-[35.5%] 2xl:left-[42%] animate-pulse"
+          className="absolute top-[60%] lg:top-[52%] left-[39%] md:left-[43%] lg:left-[34%] xl:left-[35.5%] 2xl:left-[42%] animate-pulse"
         />
       )}
     </div>
