@@ -7,6 +7,27 @@
   color: #ffffff;
 }
 
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar:horizontal {
+  display: none;
+}
+
+::-webkit-scrollbar-track {
+  background: linear-gradient(to bottom, #3b329d, #a1dcdc, #3b329d);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #f2f7ff;
+}
+
+
+.scrollbar-hidden {
+  overflow: hidden;
+}
+
 .bgGradientDown {
   background-image: linear-gradient(
     180deg,
@@ -26,7 +47,7 @@
 .gradient-border {
   border-right: 6px solid;
   border-left: 6px solid;
-  border-image: linear-gradient(to bottom, #3b329d, #0ed1ce);
+  border-image: linear-gradient(to bottom, #3b329d, #0ed1ce, #3b329d);
   border-image-slice: 1;
 }
 
@@ -87,7 +108,6 @@
 .loading-animation {
   animation: loadingAnimation 0.8s infinite alternate-reverse;
 }
-
 
 @keyframes loadingText {
   0% {

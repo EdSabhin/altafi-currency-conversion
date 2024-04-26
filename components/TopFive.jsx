@@ -24,7 +24,7 @@ const TopFive = () => {
 
   return (
     <div className="w-full md:w-[70%] lg:w-[85%] xl:w-[70%] flex overflow-x-auto bg-[#F1F5F9] rounded-md">
-      <div className="w-full flex flex-col lg:flex-row mb-12 border-t border-blue-700">
+      <div className="w-[28rem] md:w-full flex flex-col lg:flex-row mb-12 border-t border-blue-700">
         <div className="h-[10.7rem] md:h-[10.1rem] flex flex-col bg-[#F2F7FF]">
           <h2 className="pt-4 pl-5 text-2xl text-blue-500 font-semibold rounded-md underline underline-offset-4 decoration-1 decoration-dotted">
             {fullDate}

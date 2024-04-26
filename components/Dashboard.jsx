@@ -7,10 +7,10 @@ const Dashboard = ({ currencies }) => {
   const [viewDashboard, setViewDashboard] = useState(true);
 
   return (
-    <div className="w-full md:w-[70%] lg:w-[20%] 2xl:w-[22%] h-64 relative overflow-y-auto rounded-bl-md !rounded-br-none mt-8 lg:mt-0">
+    <div className="w-full md:w-[70%] lg:w-[25%] xl:w-[19.7%] 2xl:w-[22%] h-64 relative overflow-y-auto rounded-bl-md !rounded-br-none mt-8 lg:mt-0">
       <h2
         onClick={() => setViewDashboard(!viewDashboard)}
-        className={`flex justify-center px-2 py-2 z-10 rounded-tl-md ${
+        className={`flex justify-center items-center text-center px-4 md:px-2 py-3 z-10 rounded-tl-md ${
           !viewDashboard && "`w-[35%] rounded-md"
         } bg-[#021431] text-indigo-to-teal cursor-pointer`}
       >
