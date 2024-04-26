@@ -9,7 +9,7 @@ import Dashboard from "./Dashboard";
 import CurrencyChart from "./CurrencyChart";
 import TopFive from "./TopFive";
 
-const Homepage = () => {
+const Main = () => {
   const [currencies, setCurrencies] = useState("");
   const [loadingCurrencies, setLoadingCurrencies] = useState(true);
 
@@ -18,10 +18,14 @@ const Homepage = () => {
       currencyData().then(setCurrencies);
       setLoadingCurrencies(false);
     }, 4000);
-  }, []);
+      if (!loadingCurrencies) {
+        // Show scrollbar when loading is completed
+        document.body.style.overflow = "auto";
+      }
+  }, [loadingCurrencies]);
 
   return (
-    <>
+    <section>
       {loadingCurrencies ? (
         <LoadingCurrencies />
       ) : (
@@ -36,8 +40,8 @@ const Homepage = () => {
           </div>
         </div>
       )}
-    </>
+    </section>
   );
 };
 
-export default Homepage;
+export default Main;

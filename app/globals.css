@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  overflow: hidden; /* Hide scrollbar while loading in */
+}
+
 ::selection {
   background-color: #ffa500;
   color: #ffffff;
@@ -25,7 +29,7 @@
 
 
 .scrollbar-hidden {
-  overflow: hidden;
+  display: hidden;
 }
 
 .bgGradientDown {
