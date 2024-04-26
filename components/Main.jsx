@@ -14,22 +14,22 @@ const Main = () => {
   const [loadingCurrencies, setLoadingCurrencies] = useState(true);
 
   useEffect(() => {
+    currencyData().then(setCurrencies);
     setTimeout(() => {
-      currencyData().then(setCurrencies);
       setLoadingCurrencies(false);
     }, 4000);
-      if (!loadingCurrencies) {
-        // Show scrollbar when loading is completed
-        document.body.style.overflow = "auto";
-      }
+    if (!loadingCurrencies) {
+      // Show scrollbar when loading is completed
+      document.body.style.overflow = "auto";
+    }
   }, [loadingCurrencies]);
 
   return (
-    <section>
+    <section className="bg-gradient-to-b from-[#e8f4ff] to-[#F1F5F9]">
       {loadingCurrencies ? (
         <LoadingCurrencies />
       ) : (
-        <div className="md:w-full flex flex-col gap-20 md:gap-20 lg:gap-12 py-4 md:py-10 px-4 2xl:px-44">
+        <div className="md:w-full flex flex-col gap-20 md:gap-20 lg:gap-12 py-4 md:py-10 px-4 2xl:px-44 bg-[#F1F5F9] z-0">
           <div className="w-full flex flex-col lg:flex-row justify-center items-center lg:items-start pt-10">
             <Converter currencies={currencies} />
             <Dashboard currencies={currencies} />
