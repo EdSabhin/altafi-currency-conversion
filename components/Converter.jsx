@@ -1,10 +1,12 @@
 "use client";
 
 import { useState, useEffect } from "react";
+
+import { conversionData } from "@service/conversionData";
+
 import Select from "./Select";
 import CurrencyInput from "./CurrencyInput";
 import ConversionButton from "./ConversionButton";
-import { conversionData } from "@service/conversionData";
 import SwitchButton from "./SwitchButton";
 
 const Converter = ({ currencies }) => {

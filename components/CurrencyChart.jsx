@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
+
 import { historyData } from "@service/historyData";
-import { AreaChart } from "@tremor/react";
 import { yearData } from "@service/yearData";
+
+import { AreaChart } from "@tremor/react";
 import DateInput from "./DateInput";
 import ResetButton from "./ResetButton";
 
