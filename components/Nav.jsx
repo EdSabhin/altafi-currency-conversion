@@ -19,7 +19,7 @@ const Nav = () => {
         height={80}
       />
       <a className="font-semibold normal-case text-3xl tracking-widest">
-        Fialta
+        AltaFi
       </a>      
     </div>
   );
