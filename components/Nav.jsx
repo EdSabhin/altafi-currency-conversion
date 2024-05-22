@@ -13,8 +13,8 @@ const Nav = () => {
       className={`navbar ${orbitron.className} w-full flex flex-col justify-center items-center py-10 md:py-8 gap-8 bg-neutral text-neutral-content`}
     >
       <Image
-        src="/fialta-logo.svg"
-        alt="Fialta Logo"
+        src="/altafi-logo.svg"
+        alt="AltaFi Logo"
         width={80}
         height={80}
       />

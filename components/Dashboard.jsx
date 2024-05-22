@@ -44,8 +44,8 @@ const Dashboard = ({ currencies }) => {
       )}
       {!viewDashboard && (
         <Image
-          src="/fialta-logo.svg"
-          alt="Fialta Logo"
+          src="/altafi-logo.svg"
+          alt="AltaFi Logo"
           width={80}
           height={80}
           className="absolute top-[60%] lg:top-[52%] left-[39%] md:left-[43%] lg:left-[34%] xl:left-[35.5%] 2xl:left-[42%] animate-pulse"

@@ -10,7 +10,7 @@ const lora = Lora({
 });
 
 export const metadata = {
-  title: "Fialta",
+  title: "AltaFi",
   description: "Convert Currencies & View Currency History",
 };
 
@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={lora.className} data-theme="winter">
       <head>
-        <title>Fialta Currency Conversion & Data</title>
+        <title>AltaFi Currency Conversion & Data</title>
         <link rel="icon" href="/fialta-logo.svg" />
       </head>
       <body className="bg-[#F1F5F9]">
