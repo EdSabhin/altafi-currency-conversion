@@ -22,7 +22,7 @@ const Footer = () => {
           A Project by Ed Sabhin
         </a>
         <a
-          href="https://github.com/EdSabhin/fialta-currency-conversion"
+          href="https://github.com/EdSabhin/altafi-currency-conversion"
           target="_blank"
           className="flex items-center gap-4 hover:text-teal-200 cursor- group"
         >
